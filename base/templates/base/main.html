@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'base/styles.css' %}"/>
+    <link rel="icon" type="image/x-icon" href="{% static 'base/favicon.png' %}">
+    <style>
+        body{
+            background: url("{% static 'base/background.jpeg' %}") no-repeat center fixed;
+            background-size: cover;}
+
+        .main-area{
+            background-color:rgba(255, 255, 255, 0.4);
+            position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 25rem;
+                padding: 2.5rem;
+                box-sizing: border-box;
+                border: 1px solid #dadce0;
+                -webkit-border-radius: 8px;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+        }
+        .main-area h2{
+            font-family: 'Hiragino Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        text-align: center;
+        color: white;
+        }
+        .main-area p{
+
+font-family: 'Hiragino Sans';
+font-style: normal;
+font-weight: 600;
+
+line-height: 45px;
+text-align: left;
+
+color: #FFFFFF;
+        }
+        input{
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Hiragino Sans';
+            font-style: normal;
+        }
+        button{
+            background: #FFBAF8;
+            border-radius: 5px;
+            border: 1px solid white;
+            padding: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: white;
+            font-family: 'Hiragino Sans';
+            font-style: normal;
+            font-weight: 600;
+            margin-left: 35%;
+            cursor:pointer;
+        }
+        .helptext{
+            color: #000000;
+            font-size: 10px;
+            padding: none;
+            
+        }
+
+    
+    </style>
+</head>
+
+
+<body>
+    <div class="cointainer">
+        {% block content  %}
+
+        {% endblock  %}
+     </div>
+    
+
+
+    
+</body>
+</html>

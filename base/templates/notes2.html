@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+
+
+
+<header>
+        <style>
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.big-image {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://images.pexels.com/photos/2041540/pexels-photo-2041540.jpeg");
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.overlay h1 {
+        font-size: 65px;
+        letter-spacing: 0px;
+        margin: 0 0 5px;
+        margin:5px;
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 28px;
+  margin:5px;
+}
+
+#vids {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 60px;
+}
+
+#vids a:first-of-type {
+  margin-bottom: 5px;
+}
+
+.button {
+        background-color: rgba(255,255,255,0.3); /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width : 300px;
+      }
+
+
+.button5 {
+
+        background-color: rgba(255,255,255,0.3);
+        color: #fffffff;
+        color: #fffffff;
+
+      }
+</style>
+</header>
+
+<div class="big-image">
+<div class="overlay">
+<h1>Create,  Share, Sell, Notes</h1>
+<p>Never forget your notes , Upload your notes with just a scan .</p>
+<hr>
+<hr>
+
+
+
+<a href=" {% url 'upload' %}">
+<button class="button5 button">Preview</button>
+</a>
+<span>
+<a href=" {% url 'upload' %}">
+<button class="button5 button">Upload</button>
+</a>
+</span>
+<button class="button5 button">Buy / Sell</button>
+</div>
+</div>
+
+
+
+<div id="vids">
+{% block content%}
+
+
+
+{% endblock content%}
+</div>

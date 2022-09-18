@@ -1,0 +1,35 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+<body>
+    <div class='main-area'>
+
+
+        <h2>Login</h2>
+        <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+
+                <button type="submit">Login</button>
+        </form>
+        
+        
+        <p>Are you new here ? <a href="{% url 'user-register' %}">Register here</a></p>        
+    
+    
+    
+    
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock  %}
+
